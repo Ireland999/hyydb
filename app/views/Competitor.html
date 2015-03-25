@@ -1,0 +1,59 @@
+<div ng-controller="competitorController" ng-init="load()">
+    <div class="panel">
+      <div class="panel-heading">大众宝泰医药(现代店)
+        <span><button class="btn btn-xs pull-right" ng-click="">保存</button></span>
+      </div>
+      <div class="panel-body">
+        <form class="form-horizontalb row">
+            <div class="form-group">
+              <label for="na"class="col-xs-3 control-label">药品名:</label>
+              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="na" value="{{Clist[0].name}}"></div>
+            </div>
+            <div class="form-group">
+              <label for="nam"class="col-xs-3 control-label">通用名:</label>
+              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="nam" value="{{Clist[0].commonname}}"></div>
+            </div>
+            <div class="form-group">
+              <label for="sty"class="col-xs-3 control-label">规格:</label>
+              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="sty" value="{{Clist[0].standard}}"></div>
+            </div>
+            <div class="form-group">
+              <label for="firm"class="col-xs-3 control-label">厂商:</label>
+              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="firm" value="{{Clist[0].firm}}"></div>
+            </div>
+                <div class="form-group">
+                  <label for="Sp" class="col-xs-3">零售价:</label>
+                  <div class="col-xs-3"><input type="text" class="input-sm form-control" id="Sp" value="{{Clist[0].Sprice}}"></div>
+                </div>
+                <div class="form-group">
+                  <label for="Jp" class="col-xs-3">进价:</label>
+                  <div class="col-xs-3"><input type="email" class="input-sm form-control" id="Jp" value="{{Clist[0].Jprice}}"></div>
+                </div>
+            <div class="form-group">
+              <label for="it"class="col-xs-3 control-label">操作:</label>
+              <div class="col-xs-9"><select class="input-sm form-control" id="it">
+                <option>{{Clist[0].operation[0].opti1}}</option>
+                <option>{{Clist[0].operation[1].opti2}}</option></select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="sta"class="col-xs-3 control-label">推荐:</label>
+              <div class="col-xs-3"><input type="text" class="input-sm form-control" id="sta" value="{{Clist[0].recommend}}"></div>
+            </div>
+            <div class="form-group">
+              <label for="ty"class="col-xs-3 control-label">剂型:</label>
+              <div class="col-xs-3"><input type="text" class="input-sm form-control" id="ty" value="{{Clist[0].type}}"></div>
+            </div>
+        </form>
+      </div>
+    </div>
+  <div class="foo">
+  <p>竞品描述:</p>
+  <span>{{Clist[0].desc}}
+  </span>
+  <div>
+    <span><img src="{{Clist[0].pics[0].pic1}}"></span>
+    <span><a href="#"><img src="../assets/img/287159_21.jpg"></a></span>
+  </div>
+  </div>
+</div>
