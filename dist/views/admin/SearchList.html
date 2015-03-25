@@ -1,0 +1,13 @@
+
+<div ng-controller="SearchPendController" ng-init="SearchPendLoad()" >
+  <div class="col-md-12 col-sm-12 col-xs-12 DrugstoreName">
+    <span>{{items[0].DrugstoreName}}</span>
+    <p class="glyphicon glyphicon-th-list pull-right " data-toggle="dropdown" aria-expanded="false"></p>
+      <ul class="dropdown-menu pull-right listmore">
+        <li ><a ui-sref="SearchList.SearchPending"><span class="glyphicon glyphicon-bell"></span>待处理</a></li>
+        <li><a ui-sref="SearchList.SearchResolved"><span class="glyphicon glyphicon-flag"></span>已处理</a></li>
+      </ul>
+  </div>
+  <div ui-view>
+  </div>
+</div>

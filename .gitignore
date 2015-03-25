@@ -1,7 +1,6 @@
 node_modules/
 bower_components/
 app/
-dist/
 site/
 
 bower.json
