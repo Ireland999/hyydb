@@ -1,0 +1,14 @@
+{
+  "name": "哈药业代宝",
+  "main": "app",
+  "dependencies": {
+    "bootstrap":"3.3.4",
+    "angular-ui-router":"0.2.13"
+  },
+  "overrides": {
+    "marked": "lib/marked.js"
+  },
+  "proxies": {
+    "/api": "http://localhost:8080"
+  }
+}
