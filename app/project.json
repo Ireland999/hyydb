@@ -3,7 +3,8 @@
   "main": "app",
   "dependencies": {
     "bootstrap":"3.3.4",
-    "angular-ui-router":"0.2.13"
+    "angular-ui-router":"0.2.13",
+    "angular-toggle-switch":"0.5.2"
   },
   "overrides": {
     "marked": "lib/marked.js"
