@@ -2,7 +2,7 @@
   function config($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise("/");
     $stateProvider.state('SearchList',{
-      url:'/ScanInfo',
+      url:'/WorkOrder',
       templateUrl:'views/admin/SearchList.html'
     }).state('SearchList.SearchResolved',{
       url:'SearchResolved',
@@ -14,8 +14,17 @@
       url:'Comproducts/{DrugstoreName}',
       templateUrl:'views/admin/Comproducts.html'
     }).state('ScanInfo',{
-      url:'/',
+      url:'/ScanInfo',
       templateUrl:'views/admin/ScanInfo.html'
+    }).state('WorkOrder',{
+      url:'/',
+      templateUrl:'views/admin/WorkOrder.html'
+    }).state('WorkOrder.WorkPending',{
+      url:'WorkPending',
+      templateUrl:'views/admin/WorkPending.html'
+    }).state('WorkOrder.WorkResolve',{
+      url:'WorkResolved',
+      templateUrl:'views/admin/WorkResolve.html'
     });
   }
   config.$inject = ['$stateProvider','$urlRouterProvider'];
