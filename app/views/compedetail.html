@@ -1,0 +1,24 @@
+<div ng-controller="competitorController" ng-init="">
+  <div class="jing">
+    <div class="top">
+      <span class="z">{{大众宝泰医药(现代店)}}
+        <span><button class="btn btn-xs pull-right" ui-sref="center.addactive" ng-click="">保存</button></span>
+      </span>
+    </div>
+    <div class="t">
+      <span>竞品名称:</span>&nbsp;&nbsp;<span>{{所属公司}}</span><span>&nbsp;&nbsp;{{竞品名称}}</span>
+    </div>
+    <hr>
+    <div class="ic">
+      <!-- <span><img ng-src="{{获取竞品单个图片}}"></span> -->
+      <span><img src="../assets/img/vv.jpg"></span>
+    </div>
+    <HR>
+      <div class="ty">
+          <!-- <label for="na6"class="control-label">推荐级别:</label> -->
+          <div>推荐级别：&nbsp;&nbsp;<input type="text" value="{{}}"></div><br>
+          <div>销售单价：&nbsp;&nbsp;<input type="text" value="{{}}"></div><br>
+          <div>销售活动：&nbsp;&nbsp;<textarea placeholder="活动描述"></textarea></div>
+      </div>
+  </div>
+</div>
