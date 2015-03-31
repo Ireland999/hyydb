@@ -4,15 +4,25 @@
     <span>拜访工单</span>
     <p class="glyphicon glyphicon-th-list pull-right " data-toggle="dropdown" aria-expanded="false"></p>
       <ul class="dropdown-menu pull-right listmore">
-        <li ><a ui-sref="WorkOrder.WorkPending"ng-click="switchFunction(0,false)"><span class="glyphicon glyphicon-bell"></span>待处理</a></li>
-        <li><a ui-sref="WorkOrder.WorkResolve"ng-click="switchFunction(1,false)"><span class="glyphicon glyphicon-flag"></span>已处理</a></li>
+        <li >
+          <a ui-sref="WorkOrder.WorkPending"ng-click="switchFunction(0,switchStatus || false)">
+            <span class="glyphicon glyphicon-bell"></span>
+            待处理
+          </a>
+        </li>
+        <li>
+          <a ui-sref="WorkOrder.WorkResolve"ng-click="switchFunction(1,switchStatus || false) ">
+            <span class="glyphicon glyphicon-flag"></span>
+            已处理
+          </a>
+        </li>
       </ul>
   </div>
   <div class="togglep">
     <p>
       <toggle-switch
         ng-model="switchStatus"
-        on-label="计划"
+        on-label="计划"  
         off-label="待办" class="toggle" ng-click="switchFunction(0,switchStatus)">
       <toggle-switch>
     </p>
@@ -23,14 +33,11 @@
     </div>
     <div class="content" ng-repeat="item in Orders[1]">
         <div class="row row2">
-          <div class="col-md-11 col-sm-11 col-xs-10" >
+          <div class="col-md-11 col-sm-11 col-xs-12" >
             <p>
               {{item.rank}}:{{item.IssuedContent}}
               <span class="" ng-click="ShowAll(item.IssuedId)">阅读全文</span>
             </p>
-          </div>
-          <div class="col-md-1 col-sm-1 col-xs-2 arrow">
-              <a ui-sref="Comproducts({DrugstoreName:items[0].DrugstoreName})"class="glyphicon glyphicon-menu-right arrowPosition "></a> 
           </div>
            <a class="btn btn-small btn-danger" >待处理
            </a>

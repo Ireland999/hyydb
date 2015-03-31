@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap":"3.3.4",
     "angular-ui-router":"0.2.13",
-    "angular-toggle-switch":"1.2.1"
+    "angular-toggle-switch":"1.2.1",
+    "angular-bootstrap-datepicker":"0.3.1"
   },
   "overrides": {
     "marked": "lib/marked.js"

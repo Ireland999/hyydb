@@ -9,6 +9,7 @@
       switchFunction(remark,switchStatus);
     };
     var switchFunction=function(remark,switchStatus){
+
       console.log(remark);
       console.log(switchStatus);
       PendingClick(remark,switchStatus); 
@@ -24,7 +25,7 @@
                       [
                         {
                           rank:'待办1',
-                          IssuedContent:'调研三金药业 消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
+                          IssuedContent:'消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
                         },
                         {
                           rank:'待办2',
@@ -40,12 +41,12 @@
                       },
                       [
                         {
-                          rank:'待办1',
+                          rank:'待办3',
                           IssuedContent:'调研三金药业 消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
                         },
                         {
-                          rank:'待办2',
-                          IssuedContent:'调研三金药业 消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
+                          rank:'待办4',
+                          IssuedContent:' 消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
                         }
                       ]
                     ];
@@ -57,11 +58,11 @@
                       [
                         {
                           rank:'计划1',
-                          IssuedContent:'调研三金药业 消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
+                          IssuedContent:'调研三金药业 消渴降糖胶囊、通化长城药业 .'
                         },
                         {
                           rank:'计划2',
-                          IssuedContent:'调研三金药业 消渴降糖胶囊、通化长城药业 消渴降糖胶囊的销售价格和销售活动.'
+                          IssuedContent:'调研三金药业 消渴降糖胶囊、消渴降糖胶囊的销售价格和销售活动.'
                         }
                       ]
                     ];
