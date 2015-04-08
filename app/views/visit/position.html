@@ -1,26 +1,31 @@
 <div ng-controller="positionController" ng-init="loder()">
   <div class="position">
-    <div class="pic">
-      <img src="../assets/img/vv.jpg">
-    </div>
-    <div class="search" style="border:1px solid red">
-       <span>
-        <!-- <select id="tetx" class="tetx"></select> -->
-        <!-- <input type="text" class="tetx" ng-click="seach"></span> -->
-        <input id="input" type="text"><input type="submit" name="submit_button" ng-click="search()" value="" class="tetx">
-        <div id="rad" style="border:1px solid yellow">
+    <div class="search">
+      <span>
+        <input id="input" type="text" placeholder="终端定位"><input type="submit" name="submit_button" value="" ng-click="search()" class="tetx">
+        <div id="rad">
         <ul>
-          <li><input type="radio" name="radiobutton" ng-click="choose()">&nbsp;&nbsp;lllll</li>
-          <li><input type="radio" name="radiobutton">&nbsp;&nbsp;lllll</li>
-          <li><input type="radio" name="radiobutton">&nbsp;&nbsp;lllll</li>
+          <li ng-repeat="li in list">
+            <input type="radio" name="radiobutton"  ng-click="choose()" value="{{li.name}}">
+            <span>{{li.name}}</span>
+          </li><br>
+          <!-- <li><input type="radio" name="radiobutton" ng-click="choose()">&nbsp;&nbsp;lllll</li>
+          <li><input type="radio" name="radiobutton" ng-click="choose()">&nbsp;&nbsp;lllll</li> -->
         </ul>
         </div>
        </span>
     </div>
     <div class="wei">
-      <span>终端：{{"mm"}}</span><br><hr>
-      <span>经纬度：{{"ccc"}}</span><br><hr>
-      <span>地址：{{"cc"}}</span><br><hr>
+      <p class="duan">终端：{{mm}}</p>
+      <div class="jingwei">
+        <div class="jing1">经<br><br>纬<br><br>度<br></div>
+        <span class="getzhi">{{"N45°58′18.88″"}}</span>
+        <span class="getzhi2">{{"E126°28′37.45″"}}</span>
+      </div>
+      <div class="addre">
+        <div class="ad"><br>地<br><br><br>址<br><br></div>
+        <span class="addre2">{{"黑龙江省哈尔滨市松北区创新一路"}}</span>
+      </div>
     </div>
     <div class="footer">
       <span><button>确认</button><button>取消</button></span>

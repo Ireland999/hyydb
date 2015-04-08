@@ -1,7 +1,7 @@
 (function(){
   angular.module('app').controller("greetController",greetController);
-  greetController.$inject=['$scope'];
-  function greetController($scope){
+  greetController.$inject=['$scope','$location'];
+  function greetController($scope,$location){
     var load=function(){
       $scope.Slist=[{
         name:'新药特药人民药店(地段街店)',
@@ -39,7 +39,15 @@
               console.log($scope.aa);
               var sto=$('#sto');
               $(sto[0]).show();
-             }
+              console.log(1111);
+              }else{
+                document.getElementById("save").disabled = true;
+                console.log(2222);
+              }
+                  // $('#save').on('click',function(){
+               
+                      // $("#save").attr("disabled",true);
+                  // });
           }
     };
     var tackphone=function(){
@@ -61,29 +69,34 @@
         //config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。
         //对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
       });
-      // wx.uploadImage({         //上传图片接口
-      //   localId: '', // 需要上传的图片的本地ID，由chooseImage接口获得
-      //   isShowProgressTips: 1// 默认为1，显示进度提示
-      //   success: function (res) {
-      //       var serverId = res.serverId; // 返回图片的服务器端ID
-      //   }
-      // });
-      // $scope.phone=[{
-      //   ToUserName:,//企业号CorpID
-      //   FromUserName:,//成员UserID
-      //   CreateTime:,//消息创建时间（整形）
-      //   MsgType:,//消息类型（event）
-      //   Event:,//事件类型，pic_sysphoto
-      //   EventKey:,//事件key值，由开发者在创建菜单式设定
-      //   SendPicsInfo:,//发送的图片信息
-      //   Count:,//发送的图片数量
-      //   PicList:,//图片列表
-      //   picMD5Sum:,//图片的MD5值，开发者若需要，可用于验证接受到图片
-      //   AgentID:,//应用代理ID
-      // }]
+    };
+    var save=function(){
+      var radio=document.getElementsByName("radiobutton");
+          var selectvalue=null;   //  selectvalue为radio中选中的值
+          for(var i=0;i<radio.length;i++){
+            if(radio[i].checked==true) {
+              selectvalue=radio[i].value;
+              console.log(selectvalue);
+              $scope.aa=selectvalue;
+              console.log($scope.aa);
+              console.log(1111);
+              }else{
+                document.getElementById("save").disabled = true;
+                console.log(2222);
+              }
+                
+          }
+          if($scope.aa!==undefined){
+              $location.path('position');
+          }else{
+            var str='未确定终端，请先选择终端';
+            var contentcolor='#D51427';
+             Prompt(str,contentcolor);
+          }
     };
     $scope.load=load;
     $scope.store=store;
     $scope.tackphone=tackphone;
+    $scope.save=save;
 }
 })()

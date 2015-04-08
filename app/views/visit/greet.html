@@ -1,15 +1,15 @@
 <div ng-controller="greetController" class="g" ng-init="load()">
-  <div class="zhong" style="border:1px solid yellow;">
+  <div class="zhong">
     <div class="head">
       <span class="ti">附近终端</span>
     </div>
     <div class="ti1">
       <div ng-repeat="list in Slist">
-        <span><input type="radio" name="radiobutton" ng-click="store(list)" value="{{list.name}}"></span>
-        <span class="i1">{{list.name}}</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="i2">地址:{{list.address}}</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="i3">联系人:{{list.contact}}</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="i3">联系电话:{{list.phone}}</span>
+        <span><input type="radio" name="radiobutton" ng-click="store()" value="{{list.name}}"><img src="../assets/img/redmarke.png"></span>
+        <span class="i1">{{list.name}}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="i2">地址:{{list.address}}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="i2">联系人:{{list.contact}}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="i2">联系电话:{{list.phone}}</span>
       </div>
     </div>
   </div>
@@ -23,12 +23,11 @@
         <span ng-click="tackphone()"><img src="../assets/img/111.jpg"></span>
         <!-- <span><a href="https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=wxa2185a2142b1e98f&corpsecret=G8ZcwvAbFzcQzlzm8pkO8gDHZUizMfDvX1BZoZlUcDt5ohCA-Kn2eUB6Vu7poEr0">cxvxv</a>
           <a target="_blank" href="https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=dLIVTQEegLP22OJY9AEXKt99p_LrA1Qwr-BA7S7P4DW32SVU0-4PjwihtWWzyEd3">bbbb</a></span>
-   -->  
-       
+   --> 
       </div>
     </div>
     <div class="bo">
-      <a href="#">保存</a>
+      <a id="save" ng-click="save()">保存</a>
     </div>
   </div>
 </div>

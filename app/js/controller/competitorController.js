@@ -11,7 +11,7 @@
         name:'消渴降糖胶囊',
         commonname:'消渴降糖胶囊',
         standard:'0.3g/粒(相当于原药材3g)',
-        firm:'通化成城药业股份有限公司',
+        firm:'通化成城药业股份有限公司凝聚成电能',
         Sprice:'￥6.5',
         Jprice:'￥5',
         operation:[{opti1:'代理'},

@@ -1,38 +1,30 @@
 <div ng-controller="myproductCtrl" ng-init="load()">
-  <div class="panel row">
-    <div class="panel-heading">大众宝泰医药(现代店)
-        <span><button class="btn btn-xs pull-right" ui-sref="center.addactive" ng-click="">保存</button></span>
+  <div class="panel weijia">
+    <div class="panel-heading">{{"大众宝泰医药(现代店)"}}
+        <span><button class="btn btn-xs pull-right" ui-sref="center.greet" ng-click="">保存</button></span>
     </div>
-    <div class="panel-body">
-      <div class="col-xs-6">
-        <a href="#"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></a>
-      </div>
-      <div class="col-xs-6">
-        <a class="pull-right"href="">扫一扫<span class=""></span></a>
+    <!-- <div class="wopin">
+        <span class="sa"><a href="#"><img src="../assets/img/sao.png" ng-click=""></a></span>
+        <span class="sa p">扫描我品</span>
+    </div> -->
+    <div class="jiben">
+      <p>存量信息:</p>
+      <div>
+          <form>
+            <label class="control-label nam">药品名称：<span class="nam">{{}}</span></label><br>
+            <label class="control-label nam">通用名称：<span class="nam">{{}}</span></label><br>
+            <label class="control-label">&nbsp;&nbsp;规&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;：<span>{{}}</span></label><br>
+            <label class="control-label">终端预计存量：<span>{{}}</span></label><br>
+            <label class="control-label"><span class="shiji">终端实际存量：</span><span><input type="text"></span></label><br>
+          </form>
       </div>
     </div>
-  </div>
-    <div>
-       <form class="form-horizontalb row input">
-            <div class="form-group">
-              <label for="na2"class="col-xs-4 control-label">药品名称:</label>
-              <div class="col-xs-8"><input type="text" class="input-sm form-control" id="na2"></div>
-            </div>
-            <div class="form-group">
-              <label for="na2"class="col-xs-4 control-label">通用名称:</label>
-              <div class="col-xs-8"><input type="text" class="input-sm form-control" id="na2"></div>
-            </div>
-            <div class="form-group">
-              <label for="na2"class="col-xs-4 control-label">规格:</label>
-              <div class="col-xs-8"><input type="text" class="input-sm form-control" id="na2"></div>
-            </div>
-            <div class="form-group">
-              <label for="na2"class="col-xs-4 control-label">统一零售价:</label>
-              <div class="col-xs-8"><input type="text" class="input-sm form-control" id="na2"></div>
-            </div>
-       </form>
-       <hr>
-       <div class="foo">
+    <div class="foo">
+      <p class="mation">维价信息:</p>
+       <div class="shuoming">
+        <p class="shoujia">全国统一零售价：{{"6元/盒"}}</p>
+        <p class="shoujia"> 省区零售价：{{"5元/盒"}}</p>
+        <p class="shou">终端零售价：<span class="shou2"><input type="text">元/盒</span></p><hr>
           <p>维价说明:</p>
           <textarea></textarea>
           <div>
@@ -40,4 +32,5 @@
           </div>
        </div>
     </div>
+  </div>
 </div>

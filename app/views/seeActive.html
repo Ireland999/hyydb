@@ -1,52 +1,31 @@
 <div ng-controller="competitorController" ng-init="load()">
     <div class="panel">
-      <div class="panel-heading">大众宝泰医药(现代店)
+      <div class="panel-heading">{{"大众宝泰医药(现代店)"}}
         <span><button class="btn btn-xs pull-right" ng-href="#">保存</button></span>
       </div>
       <div class="panel-body">
-        <form class="form-horizontalb row">
-            <div class="form-group">
-              <label for="na3"class="col-xs-3 control-label">药品名:</label>
-              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="na3" value="{{Clist[0].name}}"></div>
-            </div>
-            <div class="form-group">
-              <label for="nam3"class="col-xs-3 control-label">通用名:</label>
-              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="nam3" value="{{Clist[0].commonname}}"></div>
-            </div>
-            <div class="form-group">
-              <label for="sty3"class="col-xs-3 control-label">规格:</label>
-              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="sty3" value="{{Clist[0].standard}}"></div>
-            </div>
-            <div class="form-group">
-              <label for="firm3"class="col-xs-3 control-label">厂商:</label>
-              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="firm3" value="{{Clist[0].firm}}"></div>
-            </div>
-                <div class="form-group">
-                  <label for="Sp3" class="col-xs-3">零售价:</label>
-                  <div class="col-xs-3"><input type="text" class="input-sm form-control" id="Sp3" value="{{Clist[0].Sprice}}"></div>
-                </div>
-                <div class="form-group">
-                  <label for="Jp3" class="col-xs-3">进价:</label>
-                  <div class="col-xs-3"><input type="email" class="input-sm form-control" id="Jp3" value="{{Clist[0].Jprice}}"></div>
-                </div>
-                <div class="rad"><span><input type="radio" name="radiobutton" value="radiobutton" >涨价
-                                       <input type="radio" name="radiobutton" value="radiobutton" >降价</span></div>
-            <div class="form-group">
-              <label for="it3"class="col-xs-3 control-label">操作:</label>
-              <div class="col-xs-9"><select class="input-sm form-control" id="it3">
-                <option>{{Clist[0].operation[0].opti1}}</option>
-                <option>{{Clist[0].operation[1].opti2}}</option></select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="sta3"class="col-xs-3 control-label">推荐:</label>
-              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="sta3" value="{{Clist[0].recommend}}"></div>
-            </div>
-            <div class="form-group">
-              <label for="ty3"class="col-xs-3 control-label">剂型:</label>
-              <div class="col-xs-9"><input type="text" class="input-sm form-control" id="ty3" value="{{Clist[0].type}}"></div>
-            </div>
-        </form>
+        <div>
+          <span><a href="#"><img src="../assets/img/sao.png" ng-click=""></span></a>
+          <span class="p">扫描竞品商标条码</span>
+        </div>
+        <div class="get">
+          <form>
+            <label class="control-label">药品名称：<span>{{"消渴降糖胶囊"}}</span></label>
+            <label class="control-label">通用名称：<span>{{"消渴降糖胶囊"}}</span></label>
+            <label class="control-label">&nbsp;&nbsp;规&nbsp;&nbsp;&nbsp;格&nbsp;&nbsp;：<span>{{"每粒装0.3g"}}</span></label>
+            <label class="control-label">&nbsp;&nbsp;厂&nbsp;&nbsp;&nbsp;商&nbsp;&nbsp;：<span>{{"通化长城药业股份有限公司"}}</span></label>
+          </form>
+        </div>
+        <br>
+        <!-- 可配内容begin -->
+        <div class="get2">
+          <form>
+            <label class="control-label">药品名称：<span>{{"消渴降糖胶囊"}}</span></label>
+            <label class="control-label">通用名称：<span>{{"消渴降糖胶囊"}}</span></label>
+            <label class="control-label">规格：<span>{{"每粒装0.3g"}}</span></label>
+            <label class="control-label">厂商：<span>{{"通化长城药业股份有限公司"}}</span></label>
+          </form>
+        </div>
       </div>
     </div>
   <div class="foo">
