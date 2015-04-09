@@ -1,0 +1,25 @@
+
+<div ng-controller="SearchPendController" ng-init="SearchPendLoad()" >
+  <div class="col-md-12 col-sm-12 col-xs-12 DrugstoreName">
+    <span>{{items[0].DrugstoreName}}</span>
+    <p class="glyphicon glyphicon-th-list pull-right " data-toggle="dropdown" aria-expanded="false"></p>
+      <ul class="dropdown-menu pull-right listmore">
+        <li ><a ui-sref="SearchList.SearchPending"><span class="glyphicon glyphicon-bell"></span>待处理</a></li>
+        <li><a ui-sref="SearchList.SearchResolved"><span class="glyphicon glyphicon-flag"></span>已处理</a></li>
+      </ul>
+  </div>
+  <a ui-sref="SearchResolved">已处理工单</a><br/>
+  <a ui-sref="Comproducts">竞品</a><br/>
+  <a ui-sref="ScanInfo">扫一扫</a><br/>
+  <a ui-sref="WorkOrder">工单</a><br/>
+  <a ui-sref="WorkOrder.WorkPending">已处理工单</a><br/>
+  <a ui-sref="WorkOrder.WorkResolve">待处理工单</a><br/>
+  <a ui-sref="VisitPlan">计划</a><br/>
+  <a ui-sref="VisitLog">拜访日志</a><br/>
+  <a ui-sref="SearchResolved">查询</a><br/>
+   <button ng-click="ConfigFun()">扫一扫</button>
+   <a target="_blank"href="https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=wx7e982df0ff12914e&corpsecret=pWhmMGqqwud-OclDNlM3Y9gN64UGNaUOJj4GV6vTfrPjiHHFsMRgN5GFVOzkfTsi">获取tocken</a>
+   <a target="_blank" href="https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=3cFmMMxkW3S4pYNiAinL4H5xoIDyK0qXxtY4bkdBE1jZaTJnUm8awXLQXqoOfXgd">获取ticket</a>
+  <div ui-view>
+  </div>
+</div>

@@ -7,22 +7,9 @@
     // }).state('center.Competitor',{              //竞品界面
     //   url:'Competitor',
     //    templateUrl:'views/Competitor.html'
-    // }).state('center.addnewCom',{               //添加新竞品
-    //   url:'addnewCom',
-    //   templateUrl:'views/addnewCom.html'
-    // }).state('center.seeActive',{               //显示竞品异动
-    //   url:'seeActive',
-    //   templateUrl:'/views/seeActive.html'
     }).state('center.addactive',{               //操作竞品异动
       url:'addactive',
       templateUrl:'/views/addactive.html'
-    // }).state('center.code',{
-    //   url:'code',
-    //   templateUrl:'/views/code.html'
-
-    // }).state('center.visit-workorder',{       //
-    //   url:'visit-workorder',
-    //   templateUrl:'views/visit/visit-workorder.html'
     }).state('center.compedetail',{               //竞品调研2页面
         url:'compedetail',
         templateUrl:'/views/compedetail.html'
@@ -38,8 +25,44 @@
     }).state('center.position',{                 //定位确定终端
       url:'position',
       templateUrl:'views/visit/position.html'
+
+
+
+      //张兰代码
+      }).state('SearchList.SearchResolved',{
+      url:'SearchResolved',
+      templateUrl:'views/admin/SearchResolved.html'
+    }).state('SearchList.SearchPending',{
+      url:'SearchPending',
+      templateUrl:'views/admin/SearchPending.html'
+    }).state('Comproducts',{
+      url:'Comproducts/{DrugstoreName}',
+      templateUrl:'views/admin/Comproducts.html'
+    }).state('ScanInfo',{
+      url:'/ScanInfo',
+      templateUrl:'views/admin/ScanInfo.html'
+    }).state('WorkOrder',{
+      url:'/WorkOrder',
+      templateUrl:'views/admin/WorkOrder.html'
+    }).state('WorkOrder.WorkPending',{
+      url:'WorkPending',
+      templateUrl:'views/admin/WorkPending.html'
+    }).state('WorkOrder.WorkResolve',{
+      url:'WorkResolved',
+      templateUrl:'views/admin/WorkResolve.html'
+    }).state('VisitPlan',{
+      url:'/VisitPlan',
+      templateUrl:'views/admin/VisitPlan.html'
+    }).state('VisitLog',{
+      url:'/VisitLog',
+      templateUrl:'views/admin/VisitLog.html'
+    }).state('model',{
+      url:'/model',
+      templateUrl:'views/admin/model.html'
+
+
     });
   }
   config.$inject = ['$stateProvider','$urlRouterProvider'];
-  angular.module('app',['ui.router']).config(config);
+  angular.module('app',['ui.router','toggle-switch','ng-bootstrap-datepicker']).config(config);
 })();
